@@ -5,7 +5,6 @@ import { store } from './store';
 import ProtectedRoute from './routes/ProtectedRoute';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Users from './pages/Users';
 import Tasks from './pages/Tasks';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
           <Route path="/register" element={<Register />} />
 
           <Route element={<ProtectedRoute />}>
-            <Route path="/users" element={<Users />} />
             <Route path="/tasks" element={<Tasks />} />
           </Route>
 

@@ -44,7 +44,7 @@ const Register = () => {
             token: result.data.session.access_token,
           }));
           toast.success('Registration successful!');
-          navigate('/users');
+          navigate('/tasks');
         } else {
           toast.success('Registration successful! Please check your email to confirm, then login.');
           navigate('/login');

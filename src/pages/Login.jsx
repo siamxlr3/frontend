@@ -32,7 +32,7 @@ const Login = () => {
             token: result.data.session.access_token 
          }));
          toast.success('Login Successful');
-         navigate('/users');
+         navigate('/tasks');
       }
     } catch (err) {
       toast.error(err.data?.message || 'Login failed');
