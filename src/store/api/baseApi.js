@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const baseApi = createApi({
     reducerPath: 'api',
     baseQuery: fetchBaseQuery({ 
-        baseUrl: 'http://localhost:5000/api/v1/',
+        baseUrl: import.meta.env.VITE_API_BASE_URL || 'https://backend-ochre-zeta-54.vercel.app/api/v1/',
         prepareHeaders: (headers, { getState }) => {
             const token = getState().auth.token;
             if (token) {
@@ -12,6 +12,6 @@ export const baseApi = createApi({
             return headers;
         },
     }),
-    tagTypes: ['User'],
+    tagTypes: ['User', 'Task', 'Comment'],
     endpoints: () => ({}),
 });
